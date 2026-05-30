@@ -1,115 +1,221 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz do Conhecimento - Totem Belmiro</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Duelo do Conhecimento</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="app">
-    <section id="tela-inicio" class="card tela ativa">
-      <div class="badge">EEEFM Belmiro Teixeira Pimenta</div>
-      <h1>Quiz do Conhecimento</h1>
-      <p class="subtitulo">Responda 12 questões, uma de cada disciplina. A pontuação considera acertos e tempo.</p>
 
-      <div class="form-grid">
-        <label>
-          Nome completo
-          <input id="nome" type="text" placeholder="Digite seu nome completo" autocomplete="off" />
-        </label>
+<!-- TELA INICIAL -->
 
-        <label>
-          Turma
-<select id="turma">
-  <option value="">Selecione sua turma</option>
+<section id="telaInicio" class="tela">
 
-  <option>9ºIM01-EF</option>
-  <option>9ºIM02-EF</option>
-  <option>9ºIM03-EF</option>
+<h1>⚔️ DUELO DO CONHECIMENTO ⚔️</h1>
 
-  <option>1ªIM01-LCH</option>
-  <option>1ªIM01-MCN</option>
-  <option>1ªIM02-LCH</option>
-  <option>1ªIM02-MCN</option>
+<div class="jogadores">
 
-  <option>1ªV01-LCH</option>
-  <option>1ªV01-MCN</option>
-  <option>1ªV02-LCH</option>
+<div class="jogador">
 
-  <option>2ªIM01-LCH</option>
-  <option>2ªIM01-MCN</option>
-  <option>2ªIM02-LCH</option>
+<h2>Jogador 1</h2>
 
-  <option>2ªV01-LCH</option>
-  <option>2ªV01-MCN</option>
-  <option>2ªV02-LCH</option>
-  <option>2ªV03-LCH</option>
+<input
+type="text"
+id="nome1"
+placeholder="Nome do jogador 1">
 
-  <option>3ªV01-EM-MID</option>
-  <option>3ªV02-EM-MID</option>
-  <option>3ªV03-EM-MID</option>
+<select id="turma1">
+<option>Selecione a turma</option>
 </select>
-        </label>
-      </div>
 
-<button class="btn principal" onclick="iniciarQuiz()">Iniciar Quiz</button>
+<select id="personagem1">
 
-<p class="aviso">Tempo máximo sugerido: 5 minutos.</p>
+<option value="🐉">🐉 Dragão</option>
+<option value="🦅">🦅 Fênix</option>
+<option value="🐺">🐺 Lobo</option>
+<option value="🦖">🦖 Titã</option>
+<option value="👻">👻 Fantasma</option>
 
-<div class="ranking-home">
-  <h2>🏆 Top 10 da Semana</h2>
+</select>
 
-  <div id="rankingInicial">
-    Carregando ranking...
-  </div>
 </div>
-    </section>
 
-    <section id="tela-quiz" class="tela">
-      <header class="topbar">
-        <div>
-          <strong>Quiz do Conhecimento</strong>
-          <span id="progresso">Questão 1 de 12</span>
-        </div>
-        <div class="timer" id="cronometro">05:00</div>
-      </header>
+<div class="jogador">
 
-      <div class="card pergunta-card">
-        <div id="disciplina" class="disciplina"></div>
-        <h2 id="pergunta"></h2>
-        <div id="alternativas" class="alternativas"></div>
-        <button class="btn principal" onclick="proximaQuestao()">Responder e continuar</button>
-      </div>
-    </section>
+<h2>Jogador 2</h2>
 
-    <section id="tela-resultado" class="card tela">
-      <h1>Resultado final</h1>
-      <div class="resultado-grid">
-        <div><span id="res-acertos">0/12</span><small>Acertos</small></div>
-        <div><span id="res-tempo">0s</span><small>Tempo</small></div>
-        <div><span id="res-pontos">0</span><small>Pontuação</small></div>
-      </div>
+<input
+type="text"
+id="nome2"
+placeholder="Nome do jogador 2">
 
-<p id="mensagem-final" class="mensagem"></p>
+<select id="turma2">
+<option>Selecione a turma</option>
+</select>
 
-<div id="posicao-ranking" class="posicao-ranking"></div>
+<select id="personagem2">
 
-      <div class="ranking-area">
-        <h2>Ranking da semana</h2>
-        <ol id="ranking-semana"></ol>
-      </div>
+<option value="🐢">🐢 Tartaruga</option>
+<option value="🦅">🦅 Fênix</option>
+<option value="🐺">🐺 Lobo</option>
+<option value="🦖">🦖 Titã</option>
+<option value="👻">👻 Fantasma</option>
 
-      <div class="ranking-area">
-        <h2>Ranking da sua turma na semana</h2>
-        <ol id="ranking-turma"></ol>
-      </div>
+</select>
 
-      <button class="btn secundaria" onclick="reiniciar()">Voltar ao início</button>
-    </section>
-  </main>
+</div>
 
-  <script src="questoes.js"></script>
-  <script src="script.js"></script>
+</div>
+
+<button id="btnIniciar">
+INICIAR DUELO
+</button>
+
+</section>
+
+<!-- TELA DE BATALHA -->
+
+<section id="telaBatalha" class="tela oculto">
+
+<div class="arena">
+
+<!-- JOGADOR 1 -->
+
+<div class="lado">
+
+<h2 id="nomeJogador1">
+Jogador 1
+</h2>
+
+<div
+id="pokemon1"
+class="personagem">
+
+🐉
+
+</div>
+
+<div
+id="vida1"
+class="vida">
+
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+</div>
+
+</div>
+
+<!-- VS -->
+
+<div class="vs">
+
+VS
+
+</div>
+
+<!-- JOGADOR 2 -->
+
+<div class="lado">
+
+<h2 id="nomeJogador2">
+Jogador 2
+</h2>
+
+<div
+id="pokemon2"
+class="personagem">
+
+🐢
+
+</div>
+
+<div
+id="vida2"
+class="vida">
+
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+</div>
+
+</div>
+
+</div>
+
+<!-- DANO DA RODADA -->
+
+<div id="danoRodada">
+
+⚔️ DANO DA RODADA
+
+❤️❤️
+
+</div>
+
+<!-- DISCIPLINA -->
+
+<div id="disciplina">
+
+QUÍMICA
+
+</div>
+
+<!-- PERGUNTA -->
+
+<div id="pergunta">
+
+Pergunta aparecerá aqui
+
+</div>
+
+<!-- RESPOSTAS -->
+
+<div class="respostas">
+
+<!-- JOGADOR 1 -->
+
+<div class="controle">
+
+<h3>Jogador 1</h3>
+
+<button>A</button>
+<button>B</button>
+<button>C</button>
+<button>D</button>
+
+</div>
+
+<!-- JOGADOR 2 -->
+
+<div class="controle">
+
+<h3>Jogador 2</h3>
+
+<button>A</button>
+<button>B</button>
+<button>C</button>
+<button>D</button>
+
+</div>
+
+</div>
+
+<!-- LOG DE BATALHA -->
+
+<div id="mensagemBatalha">
+
+A batalha vai começar!
+
+</div>
+
+</section>
+
+<script src="questoes.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
