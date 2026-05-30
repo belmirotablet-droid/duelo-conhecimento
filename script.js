@@ -240,6 +240,8 @@ function responder(jogador,resposta){
 
   atualizarVida();
 
+  atualizarPontos();
+  
   verificarFim();
 
   setTimeout(()=>{
