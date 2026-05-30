@@ -175,7 +175,11 @@ function responder(jogador,resposta){
 
   const acertou =
     resposta === questaoAtual.correta;
-
+  
+console.log("RESPONDEU");
+console.log("Jogador:", jogador);
+console.log("Acertou?", acertou);
+  
  if(acertou){
 
   if(jogador===1){
