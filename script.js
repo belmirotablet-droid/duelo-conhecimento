@@ -176,38 +176,77 @@ function responder(jogador,resposta){
   const acertou =
     resposta === questaoAtual.correta;
 
-  if(acertou){
+ if(acertou){
 
-    if(jogador===1){
+  if(jogador===1){
 
-      vida2 -= danoAtual;
+    vida2 -= danoAtual;
 
-      document
-      .getElementById("mensagemBatalha")
-      .innerHTML =
-      `🔥 ${jogador1.nome}
-       atacou ${jogador2.nome}
-       e causou ${danoAtual}
-       de dano!`;
+    pontos1 += 100;
+    acertos1++;
 
-    }
-
-    else{
-
-      vida1 -= danoAtual;
-
-      document
-      .getElementById("mensagemBatalha")
-      .innerHTML =
-      `🔥 ${jogador2.nome}
-       atacou ${jogador1.nome}
-       e causou ${danoAtual}
-       de dano!`;
-
-    }
+    document
+    .getElementById("mensagemBatalha")
+    .innerHTML =
+    `🔥 ${jogador1.nome}
+     atacou ${jogador2.nome}
+     e causou ${danoAtual}
+     de dano!`;
 
   }
 
+  else{
+
+    vida1 -= danoAtual;
+
+    pontos2 += 100;
+    acertos2++;
+
+    document
+    .getElementById("mensagemBatalha")
+    .innerHTML =
+    `🔥 ${jogador2.nome}
+     atacou ${jogador1.nome}
+     e causou ${danoAtual}
+     de dano!`;
+
+  }
+
+}
+
+   else{
+
+  if(jogador===1){
+
+    vida1 -= danoAtual;
+
+    pontos1 -= 50;
+
+    document
+    .getElementById("mensagemBatalha")
+    .innerHTML =
+    `💥 ${jogador1.nome}
+     errou e recebeu
+     ${danoAtual} de dano!`;
+
+  }
+
+  else{
+
+    vida2 -= danoAtual;
+
+    pontos2 -= 50;
+
+    document
+    .getElementById("mensagemBatalha")
+    .innerHTML =
+    `💥 ${jogador2.nome}
+     errou e recebeu
+     ${danoAtual} de dano!`;
+
+  }
+
+}
   else{
 
     if(jogador===1){
@@ -295,12 +334,12 @@ function atualizarPontos(){
 
   document.getElementById("pontos1")
     .innerHTML =
-    `🏆 ${pontos1} pontos`;
+    `🏆 ${pontos1} pts`;
 
   document.getElementById("pontos2")
     .innerHTML =
-    `🏆 ${pontos2} pontos`;
- 
+    `🏆 ${pontos2} pts`;
+
   document.getElementById("acertos1")
     .innerHTML =
     `✅ ${acertos1} acertos`;
@@ -308,4 +347,5 @@ function atualizarPontos(){
   document.getElementById("acertos2")
     .innerHTML =
     `✅ ${acertos2} acertos`;
+
 }
