@@ -30,6 +30,8 @@ let pontos2 = 0;
 let acertos1 = 0;
 let acertos2 = 0;
 
+console.log("Script carregado");
+
 let jogador1 = {};
 let jogador2 = {};
 
@@ -175,87 +177,56 @@ function responder(jogador,resposta){
 
   const acertou =
     resposta === questaoAtual.correta;
-  
-console.log("RESPONDEU");
-console.log("Jogador:", jogador);
-console.log("Acertou?", acertou);
-  
- if(acertou){
 
-  if(jogador===1){
+  console.log("RESPONDEU");
+  console.log("Jogador:", jogador);
+  console.log("Acertou?", acertou);
 
-    vida2 -= danoAtual;
+  if(acertou){
 
-    pontos1 += 100;
-    acertos1++;
+    if(jogador===1){
 
-    document
-    .getElementById("mensagemBatalha")
-    .innerHTML =
-    `🔥 ${jogador1.nome}
-     atacou ${jogador2.nome}
-     e causou ${danoAtual}
-     de dano!`;
+      vida2 -= danoAtual;
 
-  }
+      pontos1 += 100;
+      acertos1++;
 
-  else{
+      document
+      .getElementById("mensagemBatalha")
+      .innerHTML =
+      `🔥 ${jogador1.nome}
+       atacou ${jogador2.nome}
+       e causou ${danoAtual}
+       de dano!`;
 
-    vida1 -= danoAtual;
+    }
 
-    pontos2 += 100;
-    acertos2++;
+    else{
 
-    document
-    .getElementById("mensagemBatalha")
-    .innerHTML =
-    `🔥 ${jogador2.nome}
-     atacou ${jogador1.nome}
-     e causou ${danoAtual}
-     de dano!`;
+      vida1 -= danoAtual;
 
-  }
+      pontos2 += 100;
+      acertos2++;
 
-}
+      document
+      .getElementById("mensagemBatalha")
+      .innerHTML =
+      `🔥 ${jogador2.nome}
+       atacou ${jogador1.nome}
+       e causou ${danoAtual}
+       de dano!`;
 
-   else{
-
-  if(jogador===1){
-
-    vida1 -= danoAtual;
-
-    pontos1 -= 50;
-
-    document
-    .getElementById("mensagemBatalha")
-    .innerHTML =
-    `💥 ${jogador1.nome}
-     errou e recebeu
-     ${danoAtual} de dano!`;
+    }
 
   }
 
-  else{
-
-    vida2 -= danoAtual;
-
-    pontos2 -= 50;
-
-    document
-    .getElementById("mensagemBatalha")
-    .innerHTML =
-    `💥 ${jogador2.nome}
-     errou e recebeu
-     ${danoAtual} de dano!`;
-
-  }
-
-}
   else{
 
     if(jogador===1){
 
       vida1 -= danoAtual;
+
+      pontos1 -= 50;
 
       document
       .getElementById("mensagemBatalha")
@@ -269,6 +240,8 @@ console.log("Acertou?", acertou);
     else{
 
       vida2 -= danoAtual;
+
+      pontos2 -= 50;
 
       document
       .getElementById("mensagemBatalha")
@@ -284,7 +257,7 @@ console.log("Acertou?", acertou);
   atualizarVida();
 
   atualizarPontos();
-  
+
   verificarFim();
 
   setTimeout(()=>{
@@ -298,7 +271,6 @@ console.log("Acertou?", acertou);
   },2000);
 
 }
-
 function atualizarVida(){
 
   document.getElementById("vida1")
@@ -334,6 +306,7 @@ function verificarFim(){
   }
 
 }
+
 function atualizarPontos(){
 
   document.getElementById("pontos1")
