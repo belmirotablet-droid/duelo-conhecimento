@@ -300,5 +300,12 @@ function atualizarPontos(){
   document.getElementById("pontos2")
     .innerHTML =
     `🏆 ${pontos2} pontos`;
+ 
+  document.getElementById("acertos1")
+    .innerHTML =
+    `✅ ${acertos1} acertos`;
 
+  document.getElementById("acertos2")
+    .innerHTML =
+    `✅ ${acertos2} acertos`;
 }
