@@ -253,3 +253,9 @@ select{
 
   min-height:80px;
 }
+.pontos{
+  font-size:28px;
+  font-weight:bold;
+  color:#facc15;
+  margin-top:10px;
+}
