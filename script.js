@@ -24,6 +24,12 @@ const TURMAS = [
 let vida1 = 10;
 let vida2 = 10;
 
+let pontos1 = 0;
+let pontos2 = 0;
+
+let acertos1 = 0;
+let acertos2 = 0;
+
 let jogador1 = {};
 let jogador2 = {};
 
@@ -85,7 +91,9 @@ function iniciarDuelo(){
   document
     .getElementById("telaBatalha")
     .classList.remove("oculto");
-
+ 
+  atualizarPontos();
+  
   novaRodada();
 }
 
@@ -279,5 +287,16 @@ function verificarFim(){
     );
 
   }
+
+}
+function atualizarPontos(){
+
+  document.getElementById("pontos1")
+    .innerHTML =
+    `🏆 ${pontos1} pontos`;
+
+  document.getElementById("pontos2")
+    .innerHTML =
+    `🏆 ${pontos2} pontos`;
 
 }
