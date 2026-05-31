@@ -109,11 +109,18 @@ select{
   align-items:start;
 
   margin-bottom:20px;
-}
 
-.lado{
+  background:url("img/arena.png");
 
-  text-align:center;
+  background-size:cover;
+
+  background-position:center;
+
+  border-radius:20px;
+
+  padding:20px;
+
+  min-height:420px;
 }
 
 .personagem{
