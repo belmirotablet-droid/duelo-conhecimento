@@ -263,9 +263,9 @@ select{
 
 .respostas{
 
-  display:flex;
+  display:grid;
 
-  flex-direction:column;
+  grid-template-columns:1fr 1fr;
 
   gap:20px;
 
@@ -280,6 +280,15 @@ select{
     #1b2b46,
     #132238
   );
+
+  padding:18px;
+
+  border-radius:18px;
+
+  border:2px solid #334155;
+
+  width:100%;
+}
 
   padding:18px;
 
@@ -549,4 +558,13 @@ select{
   color:#111827;
 
   cursor:pointer;
+}
+
+#telaBatalha{
+
+  width:100%;
+
+  max-width:768px;
+
+  margin:auto;
 }
