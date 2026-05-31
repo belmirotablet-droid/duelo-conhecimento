@@ -280,20 +280,40 @@ function responder(jogador,resposta){
   },2000);
 
 }
+
 function atualizarVida(){
 
-  document.getElementById("vida1")
-    .textContent =
-    "❤️".repeat(
-      Math.max(0,vida1)
-    );
+  const porcentagem1 =
+    (vida1 / 10) * 100;
 
-  document.getElementById("vida2")
-    .textContent =
-    "❤️".repeat(
-      Math.max(0,vida2)
-    );
+  const porcentagem2 =
+    (vida2 / 10) * 100;
 
+  const barra1 =
+    document.getElementById("vida1");
+
+  const barra2 =
+    document.getElementById("vida2");
+
+  barra1.style.width =
+    porcentagem1 + "%";
+
+  barra2.style.width =
+    porcentagem2 + "%";
+
+  barra1.style.background =
+    porcentagem1 > 50
+    ? "#22c55e"
+    : porcentagem1 > 20
+    ? "#eab308"
+    : "#ef4444";
+
+  barra2.style.background =
+    porcentagem2 > 50
+    ? "#22c55e"
+    : porcentagem2 > 20
+    ? "#eab308"
+    : "#ef4444";
 }
 
 function verificarFim(){
