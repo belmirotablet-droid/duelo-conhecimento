@@ -67,7 +67,7 @@ h1{
 
   transform:translateX(-50%);
 
-  bottom:170px;
+  bottom:60px;
 
   width:85%;
 
@@ -112,23 +112,26 @@ select{
 
   transform:translateX(-50%);
 
-  bottom:50px;
+  bottom:20px;
 
-  width:80%;
+  width:85%;
 
-  padding:20px;
-
-  border:none;
-
-  border-radius:15px;
+  height:70px;
 
   font-size:28px;
 
   font-weight:bold;
 
+  border:none;
+
+  border-radius:15px;
+
   background:#facc15;
 
-  cursor:pointer;
+  color:#111827;
+
+  box-shadow:
+  0 4px 10px rgba(0,0,0,.4);
 }
 
 .arena{
