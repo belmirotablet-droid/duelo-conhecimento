@@ -30,9 +30,28 @@ body{
   padding:20px;
 }
 
-.tela{
-  max-width:1200px;
-  margin:auto;
+#telaInicio{
+
+  min-height:100vh;
+
+  background:
+  url("img/tela_inicio.png");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  border-radius:20px;
+
+  padding:30px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
 }
 
 .oculto{
