@@ -67,7 +67,7 @@ h1{
 
   transform:translateX(-50%);
 
-  bottom:300px;
+  top:760px;
 
   width:85%;
 
@@ -508,7 +508,7 @@ select{
 
   transform:translateX(-50%);
 
-  bottom:30px;
+  top:1160px;
 
   width:85%;
 
@@ -516,7 +516,7 @@ select{
 
   flex-direction:column;
 
-  gap:10px;
+  gap:12px;
 
   z-index:100;
 }
