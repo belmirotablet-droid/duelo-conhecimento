@@ -34,13 +34,13 @@ body{
 
   width:min(95vw,768px);
 
-  height:min(95vh,1365px);
+  height:1365px;
 
   margin:auto;
 
   position:relative;
 
-  overflow:hidden;
+  overflow:visible;
 
   background:url("img/tela_inicio.png");
 
@@ -508,7 +508,7 @@ select{
 
   transform:translateX(-50%);
 
-  bottom:5px;
+  bottom:30px;
 
   width:85%;
 
