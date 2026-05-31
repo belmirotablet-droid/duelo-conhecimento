@@ -158,7 +158,7 @@ select{
 
 .personagem{
 
-  height:180px;
+  height:120px;
 
   display:flex;
 
@@ -169,9 +169,9 @@ select{
 
 .personagem img{
 
-  width:360px;
+  width:220px;
 
-  height:360px;
+  height:220px;
 
   object-fit:contain;
 
@@ -243,7 +243,7 @@ select{
 
   border-radius:20px;
 
-  font-size:32px;
+  font-size:40px;
 
   font-weight:bold;
 
@@ -281,14 +281,6 @@ select{
     #1b2b46,
     #132238
   );
-
-  padding:18px;
-
-  border-radius:18px;
-
-  border:2px solid #334155;
-
-  width:100%;
 }
 
   padding:18px;
@@ -508,15 +500,15 @@ select{
 #pokemon1{
 
   transform:
-  translateY(85px)
-  translateX(-20px);
+  translateY(20px)
+  translateX(-10px);
 }
 
 #pokemon2{
 
   transform:
-  translateY(85px)
-  translateX(20px);
+  translateY(20px)
+  translateX(10px);
 }
 
 .acoes{
