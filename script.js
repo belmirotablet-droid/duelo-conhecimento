@@ -81,6 +81,12 @@ function iniciarDuelo(){
   document.getElementById("nomeJogador2")
     .textContent = jogador2.nome;
 
+  document.getElementById("turmaJogador1")
+  .textContent = jogador1.turma;
+
+  document.getElementById("turmaJogador2")
+  .textContent = jogador2.turma;
+  
   document.getElementById("pokemon1")
   .innerHTML =
   `<img src="img/${jogador1.personagem}.png" width="150">`;
