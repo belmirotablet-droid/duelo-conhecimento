@@ -67,7 +67,7 @@ h1{
 
   transform:translateX(-50%);
 
-  bottom:180px;
+  bottom:220px;
 
   width:85%;
 
@@ -511,7 +511,7 @@ select{
 
   transform:translateX(-50%);
 
-  bottom:20px;
+  bottom:50px;
 
   width:85%;
 
@@ -520,6 +520,8 @@ select{
   flex-direction:column;
 
   gap:10px;
+
+  z-index:100;
 }
 
 #btnRanking{
