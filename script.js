@@ -102,6 +102,15 @@ function iniciarDuelo(){
   document
     .getElementById("telaBatalha")
     .classList.remove("oculto");
+
+  document
+  .getElementById("btnRanking")
+  .addEventListener("click", () => {
+
+    window.location.href =
+      "ranking.html";
+
+});
  
   atualizarVida();
   
