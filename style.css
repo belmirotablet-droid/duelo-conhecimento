@@ -79,8 +79,14 @@ h1{
 }
 
 .jogador{
-  background:#1e293b;
-  padding:25px;
+
+  background:
+  rgba(30,41,59,.85);
+
+  backdrop-filter:blur(6px);
+
+  padding:20px;
+
   border-radius:20px;
 }
 
