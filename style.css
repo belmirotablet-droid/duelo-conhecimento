@@ -350,7 +350,12 @@ select{
   box-shadow:
   0 4px 12px rgba(0,0,0,.35);
 
-  width:320px;
+    width:320px;
+
+  min-width:320px;
+
+  max-width:320px;
+}
 
   min-height:110px;
 }
