@@ -299,7 +299,6 @@ select{
     #1b2b46,
     #132238
   );
-}
 
   padding:18px;
 
@@ -615,12 +614,4 @@ select{
   );
 
   transition:width .1s linear;
-}
-
-#telaBatalha{
-  display:none;
-}
-
-#telaBatalha.ativo{
-  display:block;
 }
