@@ -616,3 +616,11 @@ select{
 
   transition:width .1s linear;
 }
+
+#telaBatalha{
+  display:none;
+}
+
+#telaBatalha.ativo{
+  display:block;
+}
