@@ -110,11 +110,11 @@ function iniciarDuelo(){
 
   document
     .getElementById("telaInicio")
-    .classList.add("oculto");
+    .style.display = "none";
 
   document
     .getElementById("telaBatalha")
-    .classList.remove("oculto");
+    .style.display = "block";
  
   atualizarVida();
   
