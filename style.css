@@ -169,15 +169,15 @@ select{
 
 .personagem img{
 
-  width:220px;
+  width:180px;
 
-  height:220px;
+  height:180px;
 
   object-fit:contain;
 
   filter:
   drop-shadow(
-    0 10px 15px rgba(0,0,0,.45)
+    0 8px 12px rgba(0,0,0,.45)
   );
 }
 
@@ -192,13 +192,13 @@ select{
 
   text-align:center;
 
-  padding:15px;
+  padding:10px;
 
   border-radius:15px;
 
-  font-size:30px;
+  font-size:20px;
 
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
 
 #disciplina{
@@ -500,14 +500,14 @@ select{
 #pokemon1{
 
   transform:
-  translateY(20px)
+  translateY(-20px)
   translateX(-10px);
 }
 
 #pokemon2{
 
   transform:
-  translateY(20px)
+  translateY(-20px)
   translateX(10px);
 }
 
@@ -560,4 +560,37 @@ select{
   max-width:768px;
 
   margin:auto;
+}
+
+#barraTempo{
+
+  width:100%;
+
+  height:24px;
+
+  background:#1e293b;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  margin-bottom:15px;
+
+  border:2px solid #facc15;
+}
+
+#tempoRestante{
+
+  width:100%;
+
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    #22c55e,
+    #84cc16
+  );
+
+  transition:width .1s linear;
 }
