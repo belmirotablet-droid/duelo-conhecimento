@@ -65,9 +65,12 @@ h1{
 }
 
 .jogadores{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+
+  background:rgba(0,0,0,.75);
+
+  padding:20px;
+
+  border-radius:20px;
 }
 
 .jogador{
