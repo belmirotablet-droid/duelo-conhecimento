@@ -83,11 +83,11 @@ function iniciarDuelo(){
 
   document.getElementById("pokemon1")
   .innerHTML =
-  '<img src="img/verbantis.png" width="150">';
+  `<img src="img/${jogador1.personagem}.png" width="150">`;
 
   document.getElementById("pokemon2")
   .innerHTML =
-  '<img src="img/chemion.png" width="150">';
+  `<img src="img/${jogador2.personagem}.png" width="150">`;
 
   document
     .getElementById("telaInicio")
