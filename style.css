@@ -118,7 +118,7 @@ select{
 
   transform:translateX(-50%);
 
-  bottom:20px;
+  bottom:85px;
 
   width:85%;
 
@@ -509,4 +509,41 @@ select{
   transform:
   translateY(85px)
   translateX(15px);
+}
+
+#btnRanking{
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  bottom:15px;
+
+  width:85%;
+
+  height:60px;
+
+  border:none;
+
+  border-radius:15px;
+
+  font-size:24px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  background:
+  linear-gradient(
+    180deg,
+    #2563eb,
+    #1e40af
+  );
+
+  color:white;
+
+  box-shadow:
+  0 4px 10px rgba(0,0,0,.4);
 }
