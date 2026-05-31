@@ -274,3 +274,36 @@ select{
 
   margin-top:5px;
 }
+.cardJogador{
+
+  background:#f8f4e8;
+
+  color:#111827;
+
+  border-radius:20px;
+
+  padding:15px;
+
+  margin-bottom:15px;
+
+  border:4px solid #1e3a8a;
+
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.cardJogador h2{
+
+  margin-bottom:10px;
+
+  font-size:24px;
+}
+
+#turmaJogador1,
+#turmaJogador2{
+
+  font-size:18px;
+
+  margin-bottom:10px;
+
+  font-weight:bold;
+}
