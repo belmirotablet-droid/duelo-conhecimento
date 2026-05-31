@@ -512,38 +512,14 @@ select{
 }
 
 #btnRanking{
-
-  position:absolute;
-
-  left:50%;
-
-  transform:translateX(-50%);
-
-  bottom:15px;
-
-  width:85%;
-
-  height:60px;
-
-  border:none;
-
-  border-radius:15px;
-
-  font-size:24px;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  background:
-  linear-gradient(
-    180deg,
-    #2563eb,
-    #1e40af
-  );
-
+  width:100%;
+  margin-top:10px;
+  background:#f59e0b;
   color:white;
-
-  box-shadow:
-  0 4px 10px rgba(0,0,0,.4);
+  border:none;
+  border-radius:12px;
+  padding:14px;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
 }
