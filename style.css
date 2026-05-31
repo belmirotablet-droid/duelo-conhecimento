@@ -149,25 +149,6 @@ select{
   );
 }
 
-.vs{
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  height:320px;
-
-  font-size:52px;
-
-  font-weight:bold;
-
-  color:#facc15;
-
-  text-shadow:
-  0 0 8px rgba(250,204,21,.5);
-}
 .vida{
 
   font-size:36px;
