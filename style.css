@@ -331,3 +331,46 @@ select{
 
   font-weight:bold;
 }
+.hpBox{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  margin-top:10px;
+}
+
+.hpBox span{
+
+  font-weight:bold;
+
+  color:#111827;
+}
+
+.hpBar{
+
+  flex:1;
+
+  height:18px;
+
+  background:#d1d5db;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+  border:2px solid #374151;
+}
+
+.hpFill{
+
+  height:100%;
+
+  width:100%;
+
+  background:#22c55e;
+
+  transition:width .5s ease;
+}
