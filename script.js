@@ -59,6 +59,15 @@ document
 .getElementById("btnIniciar")
 .addEventListener("click", iniciarDuelo);
 
+document
+.getElementById("btnRanking")
+.addEventListener("click", () => {
+
+  window.location.href =
+    "ranking.html";
+
+});
+
 function iniciarDuelo(){
 
   jogador1.nome =
@@ -106,15 +115,6 @@ function iniciarDuelo(){
   document
     .getElementById("telaBatalha")
     .classList.remove("oculto");
-
-  document
-  .getElementById("btnRanking")
-  .addEventListener("click", () => {
-
-    window.location.href =
-      "ranking.html";
-
-});
  
   atualizarVida();
   
@@ -282,54 +282,6 @@ function responder(jogador,resposta){
 
   atualizarPontos();
 
- function verificarFim(){
-
-  if(vida1<=0){
-
-    salvarResultado(
-
-      jogador2.nome,
-
-      jogador2.turma,
-
-      pontos2,
-
-      acertos2,
-
-      jogador2.personagem
-
-    );
-
-    alert(
-      `🏆 ${jogador2.nome} venceu!`
-    );
-
-  }
-
-  if(vida2<=0){
-
-    salvarResultado(
-
-      jogador1.nome,
-
-      jogador1.turma,
-
-      pontos1,
-
-      acertos1,
-
-      jogador1.personagem
-
-    );
-
-    alert(
-      `🏆 ${jogador1.nome} venceu!`
-    );
-
-  }
-
-}
-
 function atualizarVida(){
 
   const porcentagem1 =
@@ -369,6 +321,20 @@ function verificarFim(){
 
   if(vida1<=0){
 
+    salvarResultado(
+
+      jogador2.nome,
+
+      jogador2.turma,
+
+      pontos2,
+
+      acertos2,
+
+      jogador2.personagem
+
+    );
+
     alert(
       `🏆 ${jogador2.nome} venceu!`
     );
@@ -376,6 +342,20 @@ function verificarFim(){
   }
 
   if(vida2<=0){
+
+    salvarResultado(
+
+      jogador1.nome,
+
+      jogador1.turma,
+
+      pontos1,
+
+      acertos1,
+
+      jogador1.personagem
+
+    );
 
     alert(
       `🏆 ${jogador1.nome} venceu!`
