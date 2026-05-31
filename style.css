@@ -118,9 +118,9 @@ select{
 
 .personagem{
 
-  margin-top:-10px;
+  margin:0;
 
-  height:220px;
+  height:280px;
 
   display:flex;
 
@@ -131,14 +131,14 @@ select{
 
 .personagem img{
 
-  max-width:220px;
+  width:260px;
 
-  max-height:220px;
+  height:260px;
 
   object-fit:contain;
 
   filter:drop-shadow(
-    0 6px 10px rgba(0,0,0,.4)
+    0 10px 15px rgba(0,0,0,.45)
   );
 }
 
