@@ -459,13 +459,13 @@ select{
 #pokemon1{
 
   transform:
-  translateY(35px)
-  translateX(-20px);
+  translateY(85px)
+  translateX(-15px);
 }
 
 #pokemon2{
 
   transform:
-  translateY(35px)
-  translateX(20px);
+  translateY(85px)
+  translateX(15px);
 }
