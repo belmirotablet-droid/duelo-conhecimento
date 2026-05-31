@@ -103,6 +103,8 @@ function iniciarDuelo(){
     .getElementById("telaBatalha")
     .classList.remove("oculto");
  
+  atualizarVida();
+  
   atualizarPontos();
   
   novaRodada();
