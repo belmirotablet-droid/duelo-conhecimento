@@ -1,3 +1,7 @@
+const URL_RANKING =
+
+"https://script.google.com/macros/s/AKfycbwTkBRWw1m2mf7wyjbOT9FwMTwrBLLqfNAnwyl4WA5MP_msk1IaTOFPHugs8Qk0sm1c/exec";
+
 console.log(PERSONAGENS);
 const TURMAS = [
 "9ºIM01-EF",
@@ -278,17 +282,51 @@ function responder(jogador,resposta){
 
   atualizarPontos();
 
-  verificarFim();
+ function verificarFim(){
 
-  setTimeout(()=>{
+  if(vida1<=0){
 
-    if(vida1>0 && vida2>0){
+    salvarResultado(
 
-      novaRodada();
+      jogador2.nome,
 
-    }
+      jogador2.turma,
 
-  },2000);
+      pontos2,
+
+      acertos2,
+
+      jogador2.personagem
+
+    );
+
+    alert(
+      `🏆 ${jogador2.nome} venceu!`
+    );
+
+  }
+
+  if(vida2<=0){
+
+    salvarResultado(
+
+      jogador1.nome,
+
+      jogador1.turma,
+
+      pontos1,
+
+      acertos1,
+
+      jogador1.personagem
+
+    );
+
+    alert(
+      `🏆 ${jogador1.nome} venceu!`
+    );
+
+  }
 
 }
 
@@ -364,5 +402,44 @@ function atualizarPontos(){
   document.getElementById("acertos2")
     .innerHTML =
     `✅ ${acertos2} acertos`;
+
+}
+
+async function salvarResultado(
+  nome,
+  turma,
+  pontos,
+  acertos,
+  personagem
+){
+
+  try{
+
+    await fetch(
+      URL_RANKING,
+      {
+
+        method:"POST",
+
+        body:JSON.stringify({
+
+          nome,
+          turma,
+          pontos,
+          acertos,
+          personagem
+
+        })
+
+      }
+    );
+
+  }
+
+  catch(erro){
+
+    console.log(erro);
+
+  }
 
 }
