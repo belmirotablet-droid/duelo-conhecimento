@@ -1,3 +1,4 @@
+console.log(PERSONAGENS);
 const TURMAS = [
 "9ºIM01-EF",
 "9ºIM02-EF",
